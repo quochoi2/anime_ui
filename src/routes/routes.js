@@ -1,6 +1,8 @@
 import config from '~/config';
 import AnimeDetailPage from '~/pages/AnimeDetail/AnimeDetail';
 import AnimeWatchPage from '~/pages/AnimeWatch/AnimeWatch';
+import BlogPage from '~/pages/Blog/Blog';
+import BlogDetailPage from '~/pages/BlogDetail/BlogDetail';
 import GenrePage from '~/pages/Genre/Genre';
 
 import HomePage from '~/pages/Home/Home';
@@ -28,5 +30,16 @@ export const publicRoutes = [
         path: config.paths.animeWatch,
         component: AnimeWatchPage,
     },
-    { path: '*', component: NotFound, layout: null },
+    {
+        path: config.paths.blog,
+        component: BlogPage,
+    },
+    {
+        path: config.paths.blogDetail,
+        component: BlogDetailPage,
+    },
+    {
+        path: '*',
+        component: NotFound
+    },
 ];
