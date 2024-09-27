@@ -42,7 +42,7 @@ const AnimeItem = ({ id, name, trend_id, genres, seasons, episodeCount }) => {
             ))}
           </ul>
           <h5>
-            <a href="#">{name}</a>
+            <a>{name}</a>
           </h5>
         </div>
       </div>
