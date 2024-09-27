@@ -913,7 +913,7 @@ ol {
   padding-top: 15px;
 }
 
-.product__pagination a {
+.product__pagination button {
   display: inline-block;
   font-size: 15px;
   color: #b7b7b7;
@@ -924,20 +924,37 @@ ol {
   border-radius: 50%;
   line-height: 48px;
   text-align: center;
-  -webkit-transition: all, 0.3s;
-  -o-transition: all, 0.3s;
-  transition: all, 0.3s;
+  background-color: transparent;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  margin: 0 6px;
 }
 
-.product__pagination a:hover {
+.product__pagination button.pagination-prev,
+.product__pagination button.pagination-next {
+  border-radius: 0;
+  border: none;
+  background-color: transparent;
+  width: auto;
+  height: auto;
+  padding: 10px;
+}
+
+.product__pagination button:hover {
   color: #ffffff;
 }
 
-.product__pagination a.current-page {
+.product__pagination button.current-page {
   border: 1px solid #ffffff;
 }
 
-.product__pagination a i {
+.product__pagination button.pagination-prev:hover,
+.product__pagination button.pagination-next:hover {
+  color: #ffffff;
+}
+
+.product__pagination button i {
   color: #b7b7b7;
   font-size: 15px;
 }

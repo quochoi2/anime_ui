@@ -2,13 +2,13 @@ const BlogDetailPage = () => {
   return (
     <div>
       <section
-        classname="normal-breadcrumb set-bg"
+        className="normal-breadcrumb set-bg"
         data-setbg="img/normal-breadcrumb.jpg"
       >
-        <div classname="container">
-          <div classname="row">
-            <div classname="col-lg-12 text-center">
-              <div classname="normal__breadcrumb__text">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12 text-center">
+              <div className="normal__breadcrumb__text">
                 <h2>Our Blog</h2>
                 <p>Welcome to the official Anime&nbsp;blog.</p>
               </div>

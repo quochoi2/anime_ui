@@ -5,7 +5,7 @@ const getAllMovieAndTrend = async () => {
 };
 
 const getAllMovieByTrendId = async (trendId) => {
-  return await httpRequest.put('/trend/' + trendId + '/getListMovieByTrendId');
+  return await httpRequest.get('/trend/' + trendId + '/getListMovieByTrendId');
 };
 
 export const trendService = { getAllMovieAndTrend, getAllMovieByTrendId };

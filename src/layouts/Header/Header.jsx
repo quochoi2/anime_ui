@@ -1,7 +1,25 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Search from "~/components/Search/Search";
+import { genreService } from "~/services/genreService";
 
 const Header = () => {
+  const [genres, setGenres] = useState([]);
+
+  const fetchData = () => {
+    genreService
+      .getAllNameOfGenre()
+      .then((res) => {
+        console.log(res);
+        setGenres(res);
+      })
+      .catch((err) => console.log(err));
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   return (
     <header className="header">
       <div className="container">
@@ -21,28 +39,15 @@ const Header = () => {
                     <a href="./index.html">Homepage</a>
                   </li>
                   <li>
-                    <a href="./categories.html">
-                      Categories <span className="arrow_carrot-down" />
-                    </a>
+                    <Link to="/genre/1">
+                      Genres <span className="arrow_carrot-down" />
+                    </Link>
                     <ul className="dropdown">
-                      <li>
-                        <a href="./categories.html">Categories</a>
-                      </li>
-                      <li>
-                        <a href="./anime-details.html">Anime Details</a>
-                      </li>
-                      <li>
-                        <a href="./anime-watching.html">Anime Watching</a>
-                      </li>
-                      <li>
-                        <a href="./blog-details.html">Blog Details</a>
-                      </li>
-                      <li>
-                        <a href="./signup.html">Sign Up</a>
-                      </li>
-                      <li>
-                        <a href="./login.html">Login</a>
-                      </li>
+                      {genres.map((genre, index) => (
+                        <li key={index}>
+                          <Link to={"/genre/" + genre.id}>{genre.name}</Link>
+                        </li>
+                      ))}
                     </ul>
                   </li>
                   <li>
