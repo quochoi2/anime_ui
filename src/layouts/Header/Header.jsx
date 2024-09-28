@@ -42,10 +42,14 @@ const Header = () => {
                     <Link to="/genre/1">
                       Genres <span className="arrow_carrot-down" />
                     </Link>
-                    <ul className="dropdown">
+                    <ul className="dropdown grid min-w-max grid-cols-4 gap-2">
                       {genres.map((genre, index) => (
                         <li key={index}>
-                          <Link to={"/genre/" + genre.id}>{genre.name}</Link>
+                          <Link
+                            to={"/genre/" + genre.id + "?genre=" + genre.name}
+                          >
+                            {genre.name}
+                          </Link>
                         </li>
                       ))}
                     </ul>

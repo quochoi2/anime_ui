@@ -4,8 +4,8 @@ const paths = {
     trend: 'trend/:trendId',
     genre: 'genre/:genreId',
 
-    animeDetail: '/animeDetail/:trendId/:movieId/:seasonId',
-    animeWatch: 'animeWatch/:movieId/:seasonId/:episodeId',
+    animeDetail: '/animeDetail/:trendId/:animeId/:seasonId',
+    animeWatch: 'animeWatch/:animeId/:seasonId/:episodeId',
 
     blog: '/blog',
     blogDetail: 'blogDetail/:blogId',

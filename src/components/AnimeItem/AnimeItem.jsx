@@ -12,7 +12,7 @@ const AnimeItem = ({ id, name, trend_id, genres, seasons, episodeCount }) => {
 
   return (
     <Link
-      to={`/animeDetail/trendId=${trend_id}/animeId=${id}/seasonId=${seasonId}`}
+      to={`/animeDetail/${trend_id}/${id}/${seasonId}`}
       className="col-lg-4 col-md-6 col-sm-6"
     >
       <div className="product__item">
