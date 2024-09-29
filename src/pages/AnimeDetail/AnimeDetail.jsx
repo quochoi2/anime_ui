@@ -12,7 +12,6 @@ const AnimeDetailPage = () => {
     animeDetailService
       .getAnimeById(animeId, seasonId)
       .then((res) => {
-        console.log(res);
         setAnimeDetail(res);
       })
       .catch((err) => console.log(err));

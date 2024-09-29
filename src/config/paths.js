@@ -1,6 +1,9 @@
 const paths = {
     home: '/',
 
+    login: '/login',
+    signUp: '/signUp',
+
     trend: 'trend/:trendId',
     genre: 'genre/:genreId',
 

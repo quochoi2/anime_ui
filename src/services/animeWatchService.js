@@ -1,11 +1,11 @@
 import httpRequest from "~/utils/httpRequest";
 
-const getAnimeById = async (animeId, seasonId) => {
-  return await httpRequest.get('/episode/' + animeId + '/' + seasonId);
+const getAnimeById = async (episodeId) => {
+  return await httpRequest.get('/episode/' + episodeId);
 };
 
-const getAllEpisodeBySeason = async (animeId, seasonId) => {
-  return await httpRequest.get('/episode/' + animeId + '/' + seasonId);
+const getAllEpisodeBySeason = async (seasonId) => {
+  return await httpRequest.get('/episode/' + seasonId + '/getAllBySeason');
 };
 
-export const animeDetailService = { getAnimeById, getAllEpisodeBySeason };
+export const animeWatchService = { getAnimeById, getAllEpisodeBySeason };

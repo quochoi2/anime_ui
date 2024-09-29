@@ -1,6 +1,6 @@
 const Search = () => {
   return (
-    <a href="#" className="search-switch">
+    <a href="" className="search-switch">
       <span className="icon_search" />
     </a>
   );

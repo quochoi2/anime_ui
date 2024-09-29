@@ -1312,6 +1312,11 @@ ol {
   background: #ffffff;
 }
 
+.anime__details__episodes a.click-active {
+  color: #000000;
+  background: #ffffff;
+}
+
 /*---------------------
   Breadcrumb
 -----------------------*/
