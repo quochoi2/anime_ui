@@ -34,7 +34,6 @@ const GenrePage = () => {
     }
   }, [searchParams]);
 
-  console.log(movies);
   const lastPostIndex = selectedPage * postsPerPage;
   const firstPostIndex = lastPostIndex - postsPerPage;
   const currentMovies = movies?.slice(firstPostIndex, lastPostIndex);
