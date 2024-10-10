@@ -10,7 +10,6 @@ const Header = () => {
     genreService
       .getAllNameOfGenre()
       .then((res) => {
-        console.log(res);
         setGenres(res);
       })
       .catch((err) => console.log(err));

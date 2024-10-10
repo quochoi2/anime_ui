@@ -1,11 +1,10 @@
 import { useCallback, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import Comment from "~/components/Comment/Comment";
-import VideoPlayer from "~/components/VideoPlay/VideoPlay";
 import { animeWatchService } from "~/services/animeWatchService";
 
 const AnimeWatchPage = () => {
-  const { episodeId, seasonId } = useParams();
+  const { seasonId, episodeId } = useParams();
 
   const [animeWatch, setAnimeWatch] = useState();
   const [animeList, setAnimeList] = useState();
@@ -30,6 +29,9 @@ const AnimeWatchPage = () => {
     fetchListData();
   }, [fetchData, fetchListData]);
 
+  const video = animeWatch?.video;
+  console.log(video);
+
   return (
     <div>
       <div className="breadcrumb-option">
@@ -37,10 +39,10 @@ const AnimeWatchPage = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className="breadcrumb__links">
-                <a href="./index.html">
+                <a href="/">
                   <i className="fa fa-home" /> Home
                 </a>
-                <a href="#">Anime Watch</a>
+                <a href="">Anime Detail</a>
                 <span>
                   {animeWatch?.name || "Fate Stay Night: Unlimited Blade"}
                 </span>
@@ -57,10 +59,17 @@ const AnimeWatchPage = () => {
                 style={{ marginBottom: "50px" }}
                 className="anime__video__player"
               >
-                <VideoPlayer
-                  id="demo"
-                  publicId="videos/waterfall"
-                  posterUrl={animeWatch?.video}
+                <video
+                  id="animeWatch"
+                  playsInline
+                  controls
+                  poster={animeWatch?.image || "/img/hero/hero-1.jpg"}
+                  style={{
+                    width: "100%",
+                    maxHeight: "570px",
+                    objectFit: "cover",
+                  }}
+                  src={animeWatch?.video || "/videos/holdon.mp4"}
                 />
               </div>
 
