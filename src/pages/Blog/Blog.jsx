@@ -25,6 +25,9 @@ const BlogPage = () => {
                   <div
                     className="blog__item set-bg"
                     data-setbg="img/blog/blog-1.jpg"
+                    style={{
+                      backgroundImage: 'url("img/blog/blog-1.jpg")',
+                    }}
                   >
                     <div className="blog__item__text">
                       <p>
@@ -40,6 +43,9 @@ const BlogPage = () => {
                   <div
                     className="blog__item small__item set-bg"
                     data-setbg="img/blog/blog-4.jpg"
+                    style={{
+                      backgroundImage: 'url("img/blog/blog-4.jpg")',
+                    }}
                   >
                     <div className="blog__item__text">
                       <p>
@@ -55,6 +61,9 @@ const BlogPage = () => {
                   <div
                     className="blog__item small__item set-bg"
                     data-setbg="img/blog/blog-5.jpg"
+                    style={{
+                      backgroundImage: 'url("img/blog/blog-5.jpg")',
+                    }}
                   >
                     <div className="blog__item__text">
                       <p>
@@ -70,6 +79,9 @@ const BlogPage = () => {
                   <div
                     className="blog__item set-bg"
                     data-setbg="img/blog/blog-7.jpg"
+                    style={{
+                      backgroundImage: 'url("img/blog/blog-7.jpg")',
+                    }}
                   >
                     <div className="blog__item__text">
                       <p>
@@ -87,6 +99,9 @@ const BlogPage = () => {
                   <div
                     className="blog__item small__item set-bg"
                     data-setbg="img/blog/blog-10.jpg"
+                    style={{
+                      backgroundImage: 'url("img/blog/blog-10.jpg")',
+                    }}
                   >
                     <div className="blog__item__text">
                       <p>
@@ -102,6 +117,9 @@ const BlogPage = () => {
                   <div
                     className="blog__item small__item set-bg"
                     data-setbg="img/blog/blog-11.jpg"
+                    style={{
+                      backgroundImage: 'url("img/blog/blog-11.jpg")',
+                    }}
                   >
                     <div className="blog__item__text">
                       <p>
@@ -121,6 +139,9 @@ const BlogPage = () => {
                   <div
                     className="blog__item small__item set-bg"
                     data-setbg="img/blog/blog-2.jpg"
+                    style={{
+                      backgroundImage: 'url("img/blog/blog-2.jpg")',
+                    }}
                   >
                     <div className="blog__item__text">
                       <p>
@@ -136,6 +157,9 @@ const BlogPage = () => {
                   <div
                     className="blog__item small__item set-bg"
                     data-setbg="img/blog/blog-3.jpg"
+                    style={{
+                      backgroundImage: 'url("img/blog/blog-3.jpg")',
+                    }}
                   >
                     <div className="blog__item__text">
                       <p>
@@ -151,6 +175,9 @@ const BlogPage = () => {
                   <div
                     className="blog__item set-bg"
                     data-setbg="img/blog/blog-6.jpg"
+                    style={{
+                      backgroundImage: 'url("img/blog/blog-6.jpg")',
+                    }}
                   >
                     <div className="blog__item__text">
                       <p>
@@ -166,6 +193,9 @@ const BlogPage = () => {
                   <div
                     className="blog__item small__item set-bg"
                     data-setbg="img/blog/blog-8.jpg"
+                    style={{
+                      backgroundImage: 'url("img/blog/blog-8.jpg")',
+                    }}
                   >
                     <div className="blog__item__text">
                       <p>
@@ -181,6 +211,9 @@ const BlogPage = () => {
                   <div
                     className="blog__item small__item set-bg"
                     data-setbg="img/blog/blog-9.jpg"
+                    style={{
+                      backgroundImage: 'url("img/blog/blog-9.jpg")',
+                    }}
                   >
                     <div className="blog__item__text">
                       <p>
@@ -196,6 +229,9 @@ const BlogPage = () => {
                   <div
                     className="blog__item set-bg"
                     data-setbg="img/blog/blog-12.jpg"
+                    style={{
+                      backgroundImage: 'url("img/blog/blog-12.jpg")',
+                    }}
                   >
                     <div className="blog__item__text">
                       <p>

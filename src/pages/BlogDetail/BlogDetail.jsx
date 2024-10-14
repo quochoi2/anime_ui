@@ -3,7 +3,10 @@ const BlogDetailPage = () => {
     <div>
       <section
         className="normal-breadcrumb set-bg"
-        data-setbg="img/normal-breadcrumb.jpg"
+        data-setbg="/img/normal-breadcrumb.jpg"
+        style={{
+          backgroundImage: 'url("/img/normal-breadcrumb.jpg")',
+        }}
       >
         <div className="container">
           <div className="row">
@@ -43,7 +46,14 @@ const BlogDetailPage = () => {
             </div>
             <div className="col-lg-12">
               <div className="blog__details__pic">
-                <img src="img/blog/details/blog-details-pic.jpg" alt />
+                <img
+                  src="/img/blog/details/blog-details-pic.jpg"
+                  alt
+                  style={{
+                    backgroundImage:
+                      'url("/img/blog/details/blog-details-pic.jpg")',
+                  }}
+                />
               </div>
             </div>
             <div className="col-lg-8">
@@ -64,7 +74,13 @@ const BlogDetailPage = () => {
                 </div>
                 <div className="blog__details__item__text">
                   <h4>Tobio-Nishinoya showdown:</h4>
-                  <img src="img/blog/details/bd-item-1.jpg" alt />
+                  <img
+                    src="/img/blog/details/bd-item-1.jpg"
+                    alt
+                    style={{
+                      backgroundImage: 'url("/img/blog/details/bd-item-1.jpg")',
+                    }}
+                  />
                   <p>
                     In Japan the idea of a first-year speaking to a senior the
                     way Kageyama did to Asahi is a lot more shocking than it
@@ -78,7 +94,13 @@ const BlogDetailPage = () => {
                 </div>
                 <div className="blog__details__item__text">
                   <h4>Nanatsu no Taizai: Kamigami No Gekirin</h4>
-                  <img src="img/blog/details/bd-item-2.jpg" alt />
+                  <img
+                    src="/img/blog/details/bd-item-2.jpg"
+                    alt
+                    style={{
+                      backgroundImage: 'url("/img/blog/details/bd-item-2.jpg")',
+                    }}
+                  />
                   <p>
                     In Japan the idea of a first-year speaking to a senior the
                     way Kageyama did to Asahi is a lot more shocking than it
@@ -92,7 +114,13 @@ const BlogDetailPage = () => {
                 </div>
                 <div className="blog__details__item__text">
                   <h4>ID:Ianvaded:</h4>
-                  <img src="img/blog/details/bd-item-3.jpg" alt />
+                  <img
+                    src="/img/blog/details/bd-item-3.jpg"
+                    alt
+                    style={{
+                      backgroundImage: 'url("/img/blog/details/bd-item-3.jpg")',
+                    }}
+                  />
                   <p>
                     In Japan the idea of a first-year speaking to a senior the
                     way Kageyama did to Asahi is a lot more shocking than it
@@ -137,7 +165,14 @@ const BlogDetailPage = () => {
                   <h4>3 Comments</h4>
                   <div className="blog__details__comment__item">
                     <div className="blog__details__comment__item__pic">
-                      <img src="img/blog/details/comment-1.png" alt />
+                      <img
+                        src="/img/blog/details/comment-1.png"
+                        alt
+                        style={{
+                          backgroundImage:
+                            'url("/img/blog/details/comment-1.png")',
+                        }}
+                      />
                     </div>
                     <div className="blog__details__comment__item__text">
                       <span>Sep 08, 2020</span>
@@ -153,7 +188,14 @@ const BlogDetailPage = () => {
                   </div>
                   <div className="blog__details__comment__item blog__details__comment__item--reply">
                     <div className="blog__details__comment__item__pic">
-                      <img src="img/blog/details/comment-2.png" alt />
+                      <img
+                        src="/img/blog/details/comment-2.png"
+                        alt
+                        style={{
+                          backgroundImage:
+                            'url("/img/blog/details/comment-2.png")',
+                        }}
+                      />
                     </div>
                     <div className="blog__details__comment__item__text">
                       <span>Sep 08, 2020</span>
@@ -169,7 +211,14 @@ const BlogDetailPage = () => {
                   </div>
                   <div className="blog__details__comment__item">
                     <div className="blog__details__comment__item__pic">
-                      <img src="img/blog/details/comment-3.png" alt />
+                      <img
+                        src="/img/blog/details/comment-3.png"
+                        alt
+                        style={{
+                          backgroundImage:
+                            'url("/img/blog/details/comment-3.png")',
+                        }}
+                      />
                     </div>
                     <div className="blog__details__comment__item__text">
                       <span>Sep 08, 2020</span>

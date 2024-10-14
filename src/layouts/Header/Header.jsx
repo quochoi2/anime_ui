@@ -35,7 +35,7 @@ const Header = () => {
               <nav className="header__menu mobile-menu">
                 <ul>
                   <li className="active">
-                    <a href="./index.html">Homepage</a>
+                    <Link to="/">Homepage</Link>
                   </li>
                   <li>
                     <Link to="/genre/1">
@@ -54,10 +54,10 @@ const Header = () => {
                     </ul>
                   </li>
                   <li>
-                    <a href="./blog.html">Our Blog</a>
+                    <a href="/blog">Our Blog</a>
                   </li>
                   <li>
-                    <a href="#">Contacts</a>
+                    <a href="/">Contacts</a>
                   </li>
                 </ul>
               </nav>
@@ -66,9 +66,9 @@ const Header = () => {
           <div className="col-lg-2">
             <div className="header__right">
               <Search />
-              <a href="./login.html">
+              <Link to="/login">
                 <span className="icon_profile" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

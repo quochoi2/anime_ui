@@ -21,9 +21,9 @@ const LoginPage = () => {
                   Login Now
                 </button>
               </form>
-              <a href="#" className="forget_pass">
+              <Link to="/signup" className="forget_pass">
                 Forgot Your Password?
-              </a>
+              </Link>
             </div>
           </div>
           <div className="col-lg-6">
