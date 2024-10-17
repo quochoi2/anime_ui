@@ -13,7 +13,6 @@ const HomePage = () => {
     trendService
       .getAllMovieAndTrend()
       .then((res) => {
-        console.log(res);
         setMovieTrend(res);
       })
       .catch((err) => console.log(err));

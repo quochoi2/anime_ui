@@ -1,6 +1,79 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { authService } from "~/services/authService";
+import { userService } from "~/services/userService";
+import { login } from "~/store/slices/userSlice";
 
 const LoginPage = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const [isEmailValid, setIsEmailValid] = useState(null);
+  const [isPasswordValid, setIsPasswordValid] = useState(null);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const isValidEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const handleEmailChange = (e) => {
+    const value = e.target.value;
+    setEmail(value);
+    setIsEmailValid(isValidEmail(value));
+  };
+
+  const handlePasswordChange = (e) => {
+    const value = e.target.value;
+    setPassword(value);
+    setIsPasswordValid(value.length >= 6);
+  };
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+
+    if (!isEmailValid || !isPasswordValid) {
+      return;
+    }
+
+    try {
+      const res = await authService.signin({ email, password });
+
+      if (res.code === 0) {
+        const { id, name, accessToken, refreshToken } = res.data;
+
+        const userProfile = await userService.getProfileByUserId(id);
+        console.log(userProfile);
+
+        if (!userProfile) {
+          await userService.create(id);
+        }
+
+        dispatch(
+          login({
+            userInfo: {
+              id: id,
+              email: email,
+              name: name,
+            },
+            accessToken,
+            refreshToken,
+          }),
+        );
+
+        setError("");
+        navigate("/");
+      } else {
+        setError("Login failed. Please check email or password.");
+      }
+    } catch (err) {
+      console.error("Login failed:", err);
+      setError("Something wrong. Please come back later");
+    }
+  };
+
   return (
     <section className="login spad">
       <div className="container">
@@ -8,15 +81,48 @@ const LoginPage = () => {
           <div className="col-lg-6">
             <div className="login__form">
               <h3>Login</h3>
-              <form action="#">
+              {error && <div className="alert alert-danger w-max">{error}</div>}
+              <form onSubmit={handleLogin}>
                 <div className="input__item">
-                  <input type="text" placeholder="Email address" />
+                  <input
+                    type="text"
+                    placeholder="Email address"
+                    value={email}
+                    onChange={handleEmailChange}
+                  />
                   <span className="icon_mail" />
+                  {isEmailValid === false && (
+                    <span className="text-danger">
+                      <i className="fa fa-times ml-[2px]" />
+                    </span>
+                  )}
+                  {isEmailValid === true && (
+                    <span className="text-success">
+                      <i className="fa fa-check" />
+                    </span>
+                  )}
                 </div>
+
                 <div className="input__item">
-                  <input type="text" placeholder="Password" />
+                  <input
+                    type="password"
+                    placeholder="Password"
+                    value={password}
+                    onChange={handlePasswordChange}
+                  />
                   <span className="icon_lock" />
+                  {isPasswordValid === false && (
+                    <span className="text-danger">
+                      <i className="fa fa-times ml-[2px]" />
+                    </span>
+                  )}
+                  {isPasswordValid === true && (
+                    <span className="text-success">
+                      <i className="fa fa-check" />
+                    </span>
+                  )}
                 </div>
+
                 <button type="submit" className="site-btn">
                   Login Now
                 </button>

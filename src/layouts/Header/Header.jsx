@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import Search from "~/components/Search/Search";
 import { genreService } from "~/services/genreService";
 
 const Header = () => {
+  const { userInfo, isLoggedIn } = useSelector((state) => state.user);
   const [genres, setGenres] = useState([]);
 
   const fetchData = () => {
@@ -66,9 +68,20 @@ const Header = () => {
           <div className="col-lg-2">
             <div className="header__right">
               <Search />
-              <Link to="/login">
-                <span className="icon_profile" />
-              </Link>
+              {isLoggedIn ? (
+                <div className="user-info">
+                  <img
+                    src={userInfo.image}
+                    alt="User Avatar"
+                    className="user-avatar"
+                  />
+                  <span>{userInfo.name}</span>
+                </div>
+              ) : (
+                <Link to="/login">
+                  <span className="icon_profile" />
+                </Link>
+              )}
             </div>
           </div>
         </div>
