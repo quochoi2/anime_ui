@@ -5,6 +5,7 @@ import { animeWatchService } from "~/services/animeWatchService";
 
 const AnimeWatchPage = () => {
   const { seasonId, episodeId } = useParams();
+  console.log(seasonId);
 
   const [animeWatch, setAnimeWatch] = useState();
   const [animeList, setAnimeList] = useState();
@@ -20,6 +21,7 @@ const AnimeWatchPage = () => {
 
   const fetchListData = useCallback(() => {
     animeWatchService.getAllEpisodeBySeason(seasonId).then((res) => {
+      console.log(res);
       setAnimeList(res);
     });
   }, [seasonId]);

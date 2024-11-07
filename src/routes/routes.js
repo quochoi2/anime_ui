@@ -1,15 +1,16 @@
 import config from '~/config';
-import AnimeDetailPage from '~/pages/AnimeDetail/AnimeDetail';
-import AnimeWatchPage from '~/pages/AnimeWatch/AnimeWatch';
-import LoginPage from '~/pages/Auth/Login/Login';
-import SignUpPage from '~/pages/Auth/SignUp/SignUp';
+import AnimeDetailPage from '~/pages/AnimeDetail';
+import AnimeWatchPage from '~/pages/AnimeWatch';
+import LoginPage from '~/pages/Auth/Login';
+import SignUpPage from '~/pages/Auth/SignUp';
 import BlogPage from '~/pages/Blog/Blog';
-import BlogDetailPage from '~/pages/BlogDetail/BlogDetail';
-import GenrePage from '~/pages/Genre/Genre';
-
+import BlogDetailPage from '~/pages/BlogDetail';
+import FavoritePage from '~/pages/Favorite';
+import GenrePage from '~/pages/Genre';
 import HomePage from '~/pages/Home/Home';
-import NotFound from '~/pages/Not-Found/NotFound';
-import TrendPage from '~/pages/Trend/Trend';
+
+import NotFound from '~/pages/Not-Found';
+import TrendPage from '~/pages/Trend';
 
 export const publicRoutes = [
     {
@@ -47,6 +48,10 @@ export const publicRoutes = [
     {
         path: config.paths.blogDetail,
         component: BlogDetailPage,
+    },
+    {
+        path: config.paths.favoriteMovie,
+        component: FavoritePage,
     },
     {
         path: '*',

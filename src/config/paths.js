@@ -2,16 +2,18 @@ const paths = {
     home: '/',
 
     login: '/login',
-    signUp: '/signUp',
+    signUp: '/sign-up',
 
     trend: 'trend/:trendId',
     genre: 'genre/:genreId',
 
-    animeDetail: '/animeDetail/:trendId/:animeId/:seasonId',
-    animeWatch: '/animeWatch/:animeId/:seasonId/:episodeId',
+    animeDetail: '/animedetail/:trendId/:animeId/:seasonId',
+    animeWatch: '/animewatch/:animeId/:seasonId/:episodeId',
 
     blog: '/blog',
-    blogDetail: '/blogDetail/:blogId',
+    blogDetail: '/blogdetail/:blogId',
+
+    favoriteMovie: '/favoritemovie:userId',
 
     notFound: '/not-found',
 };

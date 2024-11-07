@@ -44,11 +44,11 @@ const LoginPage = () => {
       if (res.code === 0) {
         const { id, name, accessToken, refreshToken } = res.data;
 
-        const userProfile = await userService.getProfileByUserId(id);
-        console.log(userProfile);
+        let userProfile = await userService.getProfileByUserId(id);
 
         if (!userProfile) {
           await userService.create(id);
+          userProfile = await userService.getProfileByUserId(id);
         }
 
         dispatch(
@@ -57,6 +57,10 @@ const LoginPage = () => {
               id: id,
               email: email,
               name: name,
+              image: userProfile?.image || "",
+              address: userProfile?.address || "",
+              gender: userProfile?.gender || "",
+              phone: userProfile?.phone || "",
             },
             accessToken,
             refreshToken,

@@ -8,4 +8,8 @@ const signin = async (data) => {
   return await httpRequest.post('/auth/signin', data);
 };
 
-export const authService = { signup, signin };
+const logout = async () => {
+  return await httpRequest.post('/logout');
+};
+
+export const authService = { signup, signin, logout };

@@ -12,6 +12,7 @@ const AnimeDetailPage = () => {
     animeDetailService
       .getAnimeById(animeId, seasonId)
       .then((res) => {
+        console.log(animeDetail);
         setAnimeDetail(res);
       })
       .catch((err) => console.log(err));
@@ -100,8 +101,8 @@ const AnimeDetailPage = () => {
                     </div>
                     <span>1.029 Votes</span>
                   </div>
-                  {animeDetail?.descripton != null ? (
-                    <p>{animeDetail.descripton}</p>
+                  {animeDetail?.description != null ? (
+                    <p>{animeDetail.description}</p>
                   ) : (
                     <p>
                       Every human inhabiting the world of Alcia is branded by a
